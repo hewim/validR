@@ -3,8 +3,6 @@ title: "Aufgabe B"
 subtitle: "Gütekriterien der Linearen Kalibrierung - OLS"
 ---
 
-{{< include Aufgabe_A.qmd >}}
-
 ## B.1 \| Ergebnis
 
 ::::: {.columns align="center" totalwidth="8em"}
