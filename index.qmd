@@ -5,21 +5,15 @@ title: "index"
 # Überblick über die Lehrveranstaltung
 
 ```{r child="Einfuehrung_in_R.qmd"}
-0
 ```
 
 # Aufgabe A
 
 ```{r child="Aufgabe_A.qmd"}
-1
 ```
 
 # Aufgabe B
 
-### Überschrift 3
-
-Hier noch ein Text vor dem Einbinden
 
 ```{r child="Aufgabe_B.qmd"}
-1
 ```
