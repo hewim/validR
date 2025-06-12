@@ -1,8 +1,9 @@
 ---
-title: "index"
+title: "Labor Basics"
+subtitle: "Willkommen in der Klinischen Chemie"
 ---
 
-# Überblick über die Lehrveranstaltung
+# Überblick
 
 ```{r child="Einfuehrung_in_R.qmd"}
 ```
@@ -13,7 +14,3 @@ title: "index"
 ```
 
 # Aufgabe B
-
-
-```{r child="Aufgabe_B.qmd"}
-```

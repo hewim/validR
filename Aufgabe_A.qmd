@@ -159,4 +159,3 @@ a1 <-yMean - b1 * xMean
 a1
 ```
 
-## 

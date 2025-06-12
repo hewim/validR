@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="de"><head>
-<script src="index_files/libs/clipboard/clipboard.min.js"></script>
-<script src="index_files/libs/quarto-html/tabby.min.js"></script>
-<script src="index_files/libs/quarto-html/popper.min.js"></script>
-<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="Aufgabe_A_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Aufgabe_A_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Aufgabe_A_files/libs/quarto-html/popper.min.js"></script>
+<script src="Aufgabe_A_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Aufgabe_A_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Aufgabe_A_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Aufgabe_A_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
   <meta name="author" content="H. Wimmer">
-  <title>Labor Basics</title>
+  <title>Aufgabe A</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="Aufgabe_A_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Aufgabe_A_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -94,13 +94,13 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2eb0a2e27b36dc7ca792840dbf7730b0.css">
-  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="Aufgabe_A_files/libs/revealjs/dist/theme/quarto-2eb0a2e27b36dc7ca792840dbf7730b0.css">
+  <link href="Aufgabe_A_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Aufgabe_A_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Aufgabe_A_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Aufgabe_A_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Aufgabe_A_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Aufgabe_A_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -195,8 +195,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Labor Basics</h1>
-  <p class="subtitle">Willkommen in der Klinischen Chemie</p>
+  <h1 class="title">Aufgabe A</h1>
+  <p class="subtitle">Lineare Regression - OLS</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -207,73 +207,6 @@ H. Wimmer
 </div>
 
   <p class="date">27. Februar 2025</p>
-</section>
-<section>
-<section id="überblick" class="title-slide slide level1 center">
-<h1>Überblick</h1>
-
-</section>
-<section id="was-ist" class="slide level2">
-<h2>Was ist <img data-src="images/Rlogo.svg" class="icon1">?</h2>
-<div class="fragment">
-<p><img data-src="images/Rlogo.svg" class="icon2"> ist eine Programmiersprache, und ja, das klingt <span class="fragment">abschreckend.</span></p>
-</div>
-<div class="fragment">
-<p>Für uns heißt das in erster Linie Folgendes:</p>
-<ul>
-<li class="fragment">Die Lernkurve ist sehr steil, flacht dann aber schnell ab. <span class="fragment">Versprochen!</span></li>
-<li class="fragment">Wir können prinzipiell alles damit machen, <span class="fragment">wenn wir erstmal rausgefunden haben wie’s geht.</span></li>
-</ul>
-</div>
-<div class="fragment">
-<p><img data-src="images/Rlogo.svg" class="icon2"> ist auch eine Umgebung zur computergestützten statistischen Datenanalyse und integriert eine Vielzahl an Möglichkeiten Daten zu</p>
-<ul>
-<li class="fragment">organisieren,</li>
-<li class="fragment">transformieren,</li>
-<li class="fragment">auswerten und</li>
-<li class="fragment">visualisieren.</li>
-</ul>
-</div>
-</section>
-<section id="was-ist-so-toll-an" class="slide level2">
-<h2>Was ist so toll an <img data-src="images/Rlogo.svg" class="icon1">?</h2>
-<div class="fragment">
-<p>Nicht alles an <img data-src="images/Rlogo.svg" class="icon2"> ist toll <span class="fragment">- und sobald man das erste Mal mehrere Stunden damit verbracht hat, ein vergleichsweise einfaches Problem lösen zu wollen, wird klar was wir damit meinen.</span></p>
-</div>
-<div class="fragment">
-<p>Die am häufigsten zitierten Vorteile sind die Folgenden:</p>
-<ul>
-<li class="fragment"><p>Kostenlos: keine Lizenz-, keine Updategebühren,</p></li>
-<li class="fragment"><p>Open Source: der Quellcode ist frei verfügbar, <img data-src="images/Rlogo.svg" class="icon2"> kann beliebig erweitert werden, gute Dokumentation,</p></li>
-<li class="fragment"><p>Reproduzierbarkeit: ein sauber geschriebenes <img data-src="images/Rlogo.svg" class="icon2">-Script, kann frei verfügbar ausführbar gemacht werden. <em>„In case you didn’t realize, but that’s kind of a big thing in science.“</em></p></li>
-<li class="fragment"><p>Flexibilität: <img data-src="images/Rlogo.svg" class="icon2"> ist eine Programmiersprache, das heißt per default kann <img data-src="images/Rlogo.svg" class="icon2"> erstmal alles. Vielleicht nicht alles gut, aber prinzipiell lässt sich zumindest theoretisch alles damit anstellen.</p></li>
-</ul>
-</div>
-</section>
-<section id="was-nicht-ist" class="slide level2">
-<h2>Was nicht ist <img data-src="images/Rlogo.svg" class="icon1">!</h2>
-<ul>
-<li class="fragment"><img data-src="images/Rlogo.svg" class="icon2"> ist nicht wie SPSS oder Graphpad prism.</li>
-<li class="fragment"><img data-src="images/Rlogo.svg" class="icon2"> ist im nativen Zustand ein Kommandozeilenprogramm.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/einfuehrung/screenshot_console.svg" class="quarto-figure quarto-figure-center" style="width:22cm"></p>
-</figure>
-</div>
-</section>
-<section id="überschrift-2" class="slide level2">
-<h2>Überschrift 2</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/datenstruktur.svg" class="quarto-figure quarto-figure-center" style="width:19.2cm;height:16cm"></p>
-</figure>
-</div>
-</section></section>
-<section>
-<section id="aufgabe-a" class="title-slide slide level1 center">
-<h1>Aufgabe A</h1>
-
 </section>
 <section id="einlesen-der-datei" class="slide level2">
 <h2>Einlesen der Datei</h2>
@@ -439,9 +372,6 @@ a = \bar{y} - b \cdot \bar{x}
 <pre><code>[1] 0.5351818</code></pre>
 </div>
 </div>
-</section></section>
-<section id="aufgabe-b" class="title-slide slide level1 center">
-<h1>Aufgabe B</h1>
 
 </section>
     </div>
@@ -453,22 +383,22 @@ a = \bar{y} - b \cdot \bar{x}
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="index_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
-  <script src="index_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
-  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Aufgabe_A_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -485,7 +415,7 @@ a = \bar{y} - b \cdot \bar{x}
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'chalkboard': {"buttons":true},
-'multiplex': {"secret":null,"id":"30cf977714a313c5","url":"https://reveal-multiplex.glitch.me/"},
+'multiplex': {"secret":null,"id":"d6851a39f086662f","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
