@@ -50,3 +50,161 @@ experiment$res1 <- experiment$fit1 - experiment$y
 # Anzeige des/der Variableninhalte/s in der Konsole
 experiment
 ```
+
+```{r}
+#| label: load-packages
+#| output: false
+#| echo: false
+
+require("here")
+
+```
+
+## Einlesen der Datei
+
+```{r}
+#| label: einlesen
+#| output-location: slide
+
+# Einlesen der Daten
+experiment <- read.table(
+  here("data", "experiment_1.csv"),
+  header = TRUE,
+  dec = ",",
+  sep = ";"
+  )
+
+# Anzeige des/der Variableninhalte/s in der Konsole
+experiment
+```
+
+## Ändern der Überschriften
+
+```{r}
+#| label: aendern der Ueberschriften
+#| output-location: slide
+
+# automatisches Umbenennen der Überschriften im data.frame
+# Vorsicht auf Reihenfolge der Spalten: Fehlerquelle!!!
+colnames(experiment)[1] <- "x"
+colnames(experiment)[2] <- "y"
+
+# Anzeige des/der Variableninhalte/s in der Konsole
+experiment
+```
+
+## A.1 \| Arithmetischer Mittelwert
+
+Der arithmetische Mittelwert (oft auch "arithmetisches Mittel" oder nur "Mittelwert" genannt) der Stichprobe ist der bekannteste Lageparameter und Schätzer für µ, den Mittelwert der Grundgesamtheit. Er wird gebildet, indem man alle Ausprägungen aufsummiert und durch die Gesamtzahl von Ausprägungen teilt. $$
+\bar{x}=\frac{1}{n}\cdot\sum_{i=1}^{n} x_{i}
+$$ {#eq-mittelwert}
+
+. . .
+
+```{r}
+#| label: mittelwert_x
+#| output-location: fragment
+
+# mit Funktionen sum() und nrow()
+xMean <- sum(experiment$x) / nrow(experiment)
+
+# Anzeige des/der Variableninhalte/s in der Konsole
+xMean
+```
+
+```{r}
+#| label: mittelwert_y
+#| output: false
+#| echo: false
+
+# mit Funktion mean()
+yMean <- mean(experiment$y)
+# Anzeige des/der Variableninhalte/s in der Konsole
+yMean
+```
+
+. . .
+
+Die Berechnung des Mittelwertes des Messsignals ($\bar{y}$) könnte alternativ mit der Funktion `mean(experiment$y)` berechnet, der berechnete Wert in der Variable `yMean` abgelegt werden
+
+## A.2 \| Fehlerquadratsumme
+
+Die auch als Hilfsquadrat bezeichnete Fehlerquadratsumme $Q_{xx}$ ist die Summe $\sum$ aus quadrierten Differenzen - aus den Differenzen jedes Einzewertes $x_i$ und des Mittelwerts $\bar{x}$.
+
+$$
+    Q_{xx}=\sum_{i=1}^{n}\left( x_{i}-\bar{x} \right)^2
+$$ {#eq-fehlerquadratsumme}
+
+. . .
+
+```{r}
+#| label: fehlerqudaratsumme
+#| output-location: fragment
+# Fehlerquadratsumme
+Qxx <- sum((experiment$x - xMean) ^ 2)
+# Anzeige des/der Variableninhalte/s in der Konsole
+Qxx
+```
+
+. . .
+
+::: {.callout-tip appearance="minimal"}
+Wie wird nun die Fehlerquadratsumme $Q_{yy}$ berechnet?
+:::
+
+## A.
+
+B\| Fehlerproduktsumme
+
+Die Fehlerproduktsumme $Q_{xy}$ ist die Summe $\sum$ der Produkte der Differenzen aus Einzelwerten und Mittelwert in x-Richtung $(x_i-\bar{x})$, sowie der Differenzen in y-Richtung $(y_i-\bar{y})$.
+
+$$
+Q_{xy}= \sum_{i=1}^{n}(x_i-\bar{x}) \cdot (y_i-\bar{y})
+$$ {#eq-fehlerproduktsumme}
+
+```{r}
+#| label: fehlerproduktsumme
+#| output-location: fragment
+# Produktsumme
+Qxy <- sum((experiment$x - xMean) * (experiment$y - yMean))
+# Anzeige des/der Variableninhalte/s in der Konsole
+Qxy
+```
+
+## A.B \| Steigung der Kalibrierfunktion
+
+Die Herleitung der Gleichung zur Berechnung der Steigung $b$ tut für die Berechnung nichts zur Sache, kann aber im Anhang nachgelesen werden. Die zweite, umgestellte Formel eignet sich besser für die Berechnung mit dem Taschenrechner. Sind Fehlerquadratsumme (siehe @eq-fehlerquadratsumme) und Fehlerproduktsumme ($Q_{xy}$) bereits berechnet, kann mit Hilfe dieser die Steigung einfach ermittel werden.
+
+$$
+b=\frac{\sum_{i=1}^{n} \left ( x_i-\bar{x} \right )\cdot \left (  y_i-\bar{y}  \right )}{\sum_{i=1}^{n} \left (x_{i}-\bar{x} \right )^2} =  \frac{Q_{xy}}{Q_{xx}} 
+$$ {#eq-slope}
+
+. . .
+
+```{r}
+#| label: slope
+#| output-location: fragment
+
+# Steigung der Kalibrierfunktion
+b1 <- Qxy / Qxx
+# Anzeige des/der Variableninhalte/s in der Konsole
+b1
+```
+
+## B.5 \| Achsenschnittpunkt der Kalibrierfunktion
+
+Durch Umstellen der Geradengleichung $y_i= a + b \cdot x_i$ nach $a = y_i - b \cdot x_i$ und Einsetzten der Mittelwerte für Konzentration und Extinktion (die Regressionsgerade läuft stets durch den Datenschwerpunkt) kann man den Schnittpunkt $a$ auf der y-Achse berechnen:
+
+$$
+a = \bar{y} - b \cdot \bar{x}
+$$ {#eq-intercept}
+
+```{r}
+#| label: intercept
+#| output-location: fragment
+
+# Achsenabschitt der Kalibrierfunktion
+a1 <-yMean - b1 * xMean 
+# Anzeige des/der Variableninhalte/s in der Konsole
+a1
+```
