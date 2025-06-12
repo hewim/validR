@@ -1,5 +1,6 @@
 project:
   title: "validR"
+  output-dir: "docs"
 
 author: "K. Fröhlich & H. Wimmer"
 date: 27.Februar 2025

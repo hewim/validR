@@ -9,11 +9,13 @@ title: "Folientitel"
 ```
 
 # Aufgabe A
+
 ```{r child="Aufgabe_A.qmd"}
 1
 ```
 
 # Aufgabe B
+
 ```{r child="Aufgabe_B.qmd"}
 2
 ```
