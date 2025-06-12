@@ -1,0 +1,51 @@
+/*-- scss:defaults --*/
+
+// fonts
+@import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+
+$font-family-sans-serif: "Atkinson Hyperlegible", sans-serif;
+$presentation-font-size-root: 28px;
+
+// headings
+$presentation-title-slide-text-align: "left";
+$presentation-subtitle-slide-text-align: "left";
+$code-block-font-size: 0.9em;
+
+$presentation-h2-font-size: 1.4em;
+
+
+// colors
+$presentation-heading-color: #546E7A;
+$code-color: #5f5f5f;
+$theme-orange: #F18800;
+
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.reveal .slide-logo {
+  height: 75px !important;
+  width: 75px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
+
+.slide-background-content{
+  background-image: linear-gradient(white  , #ddf1fd );
+  background-size: 100% 100%;
+}
+
+
+.icon1{
+  margin: 0!important;
+  height: 42px;
+}
+
+.icon2{
+  margin: 0!important;
+  height: 30px;
+}

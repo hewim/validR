@@ -1,0 +1,54 @@
+---
+title: "Aufgabe B"
+subtitle: "Gütekriterien der Linearen Kalibrierung - OLS"
+---
+
+{{< include Aufgabe_A.qmd >}}
+
+## B.1 \| Ergebnis
+
+::::: {.columns align="center" totalwidth="8em"}
+::: {.column width="40%"}
+Mittelwert $\bar{x}$ (`xMean`)
+
+Mittelwert $\bar{y}$ (`yMean`)
+
+Fehlerquadratsumme (`Qxx`)
+
+Fehlerproduktsumme (`Qxy`)
+:::
+
+::: {.column width="60%" align="bottom"}
+`r mean(experiment$x)` mg/dL
+
+`r mean(experiment$y)` E
+
+`r Qxx` (mg/dL)^2^
+
+`r Qxy` (mg/dL)^2^
+:::
+:::::
+
+## Geschätzte Werte $\bar{y}$
+
+```{r}
+#| label: gefittete_Werte
+#| output-location: fragment
+
+# gefittete Werte
+experiment$fit1 <- a1 + b1 * experiment$x
+# Anzeige des/der Variableninhalte/s in der Konsole
+experiment
+```
+
+## Residualabstände
+
+```{r}
+#| label: Residuen
+#| output-location: fragment
+
+# Residuen
+experiment$res1 <- experiment$fit1 - experiment$y
+# Anzeige des/der Variableninhalte/s in der Konsole
+experiment
+```

@@ -1,0 +1,27 @@
+project:
+  title: "validR"
+
+author: "K. Fröhlich & H. Wimmer"
+date: 27.Februar 2025
+date-format: "DD. MMMM YYYY"
+editor: visual
+lang: de
+
+format: 
+  revealjs:
+    chalkboard: true
+    multiplex: true
+    transition: convex
+    background-transition: fade
+    footer: "Mathematik 2 - Validierung analytischer Daten"
+    logo: logo.png
+    slide-number: true
+    show-slide-number: print
+    incremental: true   
+    scrollable: true
+    theme: [default, mytheme.scss]
+
+
+execute: 
+  echo: true
+

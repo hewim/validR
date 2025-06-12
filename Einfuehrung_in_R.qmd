@@ -1,0 +1,55 @@
+---
+title: "Einführung in R"
+subtitle: "Mathematik 2 - Validierung analytischer Daten"
+---
+
+## Was ist ![](images/Rlogo.svg){.icon1}?
+
+. . .
+
+![](images/Rlogo.svg){.icon2} ist eine Programmiersprache, und ja, das klingt [abschreckend.]{.fragment}
+
+. . .
+
+Für uns heißt das in erster Linie Folgendes:
+
+-   Die Lernkurve ist sehr steil, flacht dann aber schnell ab. [Versprochen!]{.fragment}
+-   Wir können prinzipiell alles damit machen, [wenn wir erstmal rausgefunden haben wie's geht.]{.fragment}
+
+. . .
+
+![](images/Rlogo.svg){.icon2} ist auch eine Umgebung zur computergestützten statistischen Datenanalyse und integriert eine Vielzahl an Möglichkeiten Daten zu
+
+-   organisieren,
+-   transformieren,
+-   auswerten und
+-   visualisieren.
+
+## Was ist so toll an ![](images/Rlogo.svg){.icon1}?
+
+. . .
+
+Nicht alles an ![](images/Rlogo.svg){.icon2} ist toll [- und sobald man das erste Mal mehrere Stunden damit verbracht hat, ein vergleichsweise einfaches Problem lösen zu wollen, wird klar was wir damit meinen.]{.fragment}
+
+. . .
+
+Die am häufigsten zitierten Vorteile sind die Folgenden:
+
+-   Kostenlos: keine Lizenz-, keine Updategebühren,
+
+-   Open Source: der Quellcode ist frei verfügbar, ![](images/Rlogo.svg){.icon2} kann beliebig erweitert werden, gute Dokumentation,
+
+-   Reproduzierbarkeit: ein sauber geschriebenes ![](images/Rlogo.svg){.icon2}-Script, kann frei verfügbar ausführbar gemacht werden. *„In case you didn’t realize, but that’s kind of a big thing in science.“*
+
+-   Flexibilität: ![](images/Rlogo.svg){.icon2} ist eine Programmiersprache, das heißt per default kann ![](images/Rlogo.svg){.icon2} erstmal alles. Vielleicht nicht alles gut, aber prinzipiell lässt sich zumindest theoretisch alles damit anstellen.
+
+## Was nicht ist ![](images/Rlogo.svg){.icon1}!
+
+-   ![](images/Rlogo.svg){.icon2} ist nicht wie SPSS oder Graphpad prism.
+-   ![](images/Rlogo.svg){.icon2} ist im nativen Zustand ein Kommandozeilenprogramm.
+
+![](images/einfuehrung/screenshot_console.svg){fig-align="center" width="22cm"}
+
+## Überschrift 2
+
+![](images/datenstruktur.svg){fig-align="center" width="19.2cm" height="16cm"}

@@ -1,0 +1,19 @@
+---
+title: "Folientitel"
+---
+
+# Überblick über die Lehrveranstaltung
+
+```{r child="Einfuehrung_in_R.qmd"}
+
+```
+
+# Aufgabe A
+```{r child="Aufgabe_A.qmd"}
+1
+```
+
+# Aufgabe B
+```{r child="Aufgabe_B.qmd"}
+2
+```
