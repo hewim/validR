@@ -2,7 +2,7 @@ project:
   title: "validR"
   output-dir: "docs"
 
-author: "K. Fröhlich & H. Wimmer"
+author: "H. Wimmer"
 date: 27.Februar 2025
 date-format: "DD. MMMM YYYY"
 editor: visual
