@@ -14,3 +14,6 @@ subtitle: "Willkommen in der Klinischen Chemie"
 ```
 
 # Aufgabe B
+
+```{r child="Aufgabe_B.qmd"}
+```
