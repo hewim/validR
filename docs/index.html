@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.40">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="H. Wimmer">
   <title>Labor Basics</title>
@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-2eb0a2e27b36dc7ca792840dbf7730b0.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-13c0805cde41017bab371c05e24bcf75.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -440,10 +440,51 @@ a = \bar{y} - b \cdot \bar{x}
 </div>
 </div>
 </section></section>
+<section>
 <section id="aufgabe-b" class="title-slide slide level1 center">
 <h1>Aufgabe B</h1>
 
 </section>
+<section id="b.1-ergebnis" class="slide level2">
+<h2>B.1 | Ergebnis</h2>
+<div class="columns" data-align="center" data-totalwidth="8em">
+<div class="column" style="width:40%;">
+<p>Mittelwert <span class="math inline">\(\bar{x}\)</span> (<code>xMean</code>)</p>
+<p>Mittelwert <span class="math inline">\(\bar{y}\)</span> (<code>yMean</code>)</p>
+<p>Fehlerquadratsumme (<code>Qxx</code>)</p>
+<p>Fehlerproduktsumme (<code>Qxy</code>)</p>
+</div><div class="column" data-align="bottom" style="width:60%;">
+<p>190 mg/dL</p>
+<p>1.5712 E</p>
+<p>3.3^{4} (mg/dL)<sup>2</sup></p>
+<p>179.94 (mg/dL)<sup>2</sup></p>
+</div></div>
+</section>
+<section id="geschätzte-werte-bary" class="slide level2">
+<h2>Geschätzte Werte <span class="math inline">\(\bar{y}\)</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># gefittete Werte</span></span>
+<span id="cb15-2"><a href=""></a>experiment<span class="sc">$</span>fit1 <span class="ot">&lt;-</span> a1 <span class="sc">+</span> b1 <span class="sc">*</span> experiment<span class="sc">$</span>x</span>
+<span id="cb15-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb15-4"><a href=""></a>experiment</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>     x     y     fit1
+1  100 1.064 1.080455
+2  120 1.177 1.189509
+3  140 1.303 1.298564
+4  160 1.414 1.407618
+5  180 1.534 1.516673
+6  200 1.642 1.625727
+7  220 1.744 1.734782
+8  240 1.852 1.843836
+9  260 1.936 1.952891
+10 280 2.046 2.061945</code></pre>
+</div>
+</div>
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="logo.png" class="slide-logo"></p>
@@ -666,42 +707,80 @@ a = \bar{y} - b \cdot \bar{x}
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {

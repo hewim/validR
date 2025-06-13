@@ -6,14 +6,20 @@ subtitle: "Willkommen in der Klinischen Chemie"
 # Überblick
 
 ```{r child="Einfuehrung_in_R.qmd"}
+#| label: E
+
 ```
 
 # Aufgabe A
 
 ```{r child="Aufgabe_A.qmd"}
+#| label: A
+
 ```
 
 # Aufgabe B
 
 ```{r child="Aufgabe_B.qmd"}
+#| label: B
+
 ```
