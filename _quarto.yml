@@ -2,7 +2,13 @@ project:
   title: "validR"
   output-dir: "docs"
 
-author: "H. Wimmer"
+authors:
+  - name: H. Wimmer
+    affiliation: 
+      name: "FH Campus Wien"
+      url: "https://www.fh-campuswien.ac.at"
+    email: helge.wimmer@fh-campuswien.ac.at
+
 date: 27.Februar 2025
 date-format: "DD. MMMM YYYY"
 editor: visual
