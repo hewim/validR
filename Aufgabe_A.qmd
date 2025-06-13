@@ -158,4 +158,3 @@ a1 <-yMean - b1 * xMean
 # Anzeige des/der Variableninhalte/s in der Konsole
 a1
 ```
-

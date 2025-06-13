@@ -1,6 +1,8 @@
 ---
 title: "Labor Basics"
 subtitle: "Willkommen in der Klinischen Chemie"
+toc: true
+toc-depth: 1
 ---
 
 # Überblick
