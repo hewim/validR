@@ -1,6 +1,6 @@
 ---
-title: "Labor Basics"
-subtitle: "Willkommen in der Klinischen Chemie"
+title: "Validierung analytischer Messdaten"
+subtitle: "Mathematik 2"
 toc: true
 toc-depth: 1
 ---
@@ -12,14 +12,14 @@ toc-depth: 1
 
 ```
 
-# Aufgabe A
+# Aufgabe A - Grundkalibrierung
 
 ```{r child="Aufgabe_A.qmd"}
 #| label: A
 
 ```
 
-# Aufgabe B
+# Aufgabe B - Gütekriterien
 
 ```{r child="Aufgabe_B.qmd"}
 #| label: B

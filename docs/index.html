@@ -6,10 +6,10 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.42">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.40">
 
-  <title>Labor Basics</title>
+  <title>Validierung analytischer Messdaten</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-9b2bcde2f9f3a6edb201e74bec3b19b1.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-d9317464014239d7d064f680730fb486.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -194,8 +194,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Labor Basics</h1>
-  <p class="subtitle">Willkommen in der Klinischen Chemie</p>
+  <h1 class="title">Validierung analytischer Messdaten</h1>
+  <p class="subtitle">Mathematik 2</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -213,14 +213,14 @@ H. Wimmer
     </div>
 </div>
 
-  <p class="date">27. Februar 2025</p>
+  <p class="date">01. Oktober 2025</p>
 </section><section id="TOC">
 <nav role="doc-toc"> 
 <h2 id="toc-title">Inhaltsverzeichnis</h2>
 <ul>
 <li class="fragment"><a href="#/überblick" id="/toc-überblick">Überblick</a></li>
-<li class="fragment"><a href="#/aufgabe-a" id="/toc-aufgabe-a">Aufgabe A</a></li>
-<li class="fragment"><a href="#/aufgabe-b" id="/toc-aufgabe-b">Aufgabe B</a></li>
+<li class="fragment"><a href="#/aufgabe-a---grundkalibrierung" id="/toc-aufgabe-a---grundkalibrierung">Aufgabe A - Grundkalibrierung</a></li>
+<li class="fragment"><a href="#/aufgabe-b---gütekriterien" id="/toc-aufgabe-b---gütekriterien">Aufgabe B - Gütekriterien</a></li>
 </ul>
 </nav>
 </section>
@@ -287,8 +287,8 @@ H. Wimmer
 </div>
 </section></section>
 <section>
-<section id="aufgabe-a" class="title-slide slide level1 center">
-<h1>Aufgabe A</h1>
+<section id="aufgabe-a---grundkalibrierung" class="title-slide slide level1 center">
+<h1>Aufgabe A - Grundkalibrierung</h1>
 
 </section>
 <section id="einlesen-der-datei" class="slide level2">
@@ -348,9 +348,9 @@ H. Wimmer
 9  260 1.936
 10 280 2.046</code></pre>
 </div>
-</div></section><section id="a.1-arithmetischer-mittelwert" class="slide level2">
+</div></section><section id="a.1-arithmetischer-mittelwert" class="slide level2 scrollable">
 <h2>A.1 | Arithmetischer Mittelwert</h2>
-<p>Der arithmetische Mittelwert (oft auch “arithmetisches Mittel” oder nur “Mittelwert” genannt) der Stichprobe ist der bekannteste Lageparameter und Schätzer für µ, den Mittelwert der Grundgesamtheit. Er wird gebildet, indem man alle Ausprägungen aufsummiert und durch die Gesamtzahl von Ausprägungen teilt. <span id="eq-mittelwert"><span class="math display">\[
+<p>Der arithmetische Mittelwert (oft auch “arithmetisches Mittel” oder nur “Mittelwert” genannt) der Stichprobe ist der bekannteste Lageparameter und Schätzer für µ, den Mittelwert der Grundgesamtheit. <span id="eq-mittelwert"><span class="math display">\[
 \bar{x}=\frac{1}{n}\cdot\sum_{i=1}^{n} x_{i}
 \qquad(1)\]</span></span></p>
 <div class="fragment">
@@ -368,7 +368,7 @@ H. Wimmer
 </div>
 </div>
 <div class="fragment">
-<p>Die Berechnung des Mittelwertes des Messsignals (<span class="math inline">\(\bar{y}\)</span>) könnte alternativ mit der Funktion <code>mean(experiment$y)</code> berechnet, der berechnete Wert in der Variable <code>yMean</code> abgelegt werden</p>
+<p>Die Berechnung des Mittelwertes des Messsignals (<span class="math inline">\(\bar{y}\)</span>) könnte alternativ mit der Funktion <code>mean(experiment$y)</code> berechnet, der berechnete Wert in der Variable <code>yMean</code> abgelegt werden.</p>
 </div>
 </section>
 <section id="a.2-fehlerquadratsumme" class="slide level2">
@@ -391,8 +391,11 @@ H. Wimmer
 </div>
 </div>
 <div class="fragment">
-<div class="callout callout-tip no-icon callout-style-simple">
+<div class="callout callout-caution callout-style-simple">
 <div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
 <div class="callout-content">
 <p>Wie wird nun die Fehlerquadratsumme <span class="math inline">\(Q_{yy}\)</span> berechnet?</p>
 </div>
@@ -457,8 +460,8 @@ a = \bar{y} - b \cdot \bar{x}
 </div>
 </section></section>
 <section>
-<section id="aufgabe-b" class="title-slide slide level1 center">
-<h1>Aufgabe B</h1>
+<section id="aufgabe-b---gütekriterien" class="title-slide slide level1 center">
+<h1>Aufgabe B - Gütekriterien</h1>
 
 </section>
 <section id="b.1-ergebnis" class="slide level2">
@@ -723,80 +726,42 @@ a = \bar{y} - b \cdot \bar{x}
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {

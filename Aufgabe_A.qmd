@@ -45,9 +45,9 @@ colnames(experiment)[2] <- "y"
 experiment
 ```
 
-## A.1 \| Arithmetischer Mittelwert
+## A.1 \| Arithmetischer Mittelwert {.scrollable}
 
-Der arithmetische Mittelwert (oft auch "arithmetisches Mittel" oder nur "Mittelwert" genannt) der Stichprobe ist der bekannteste Lageparameter und Schätzer für µ, den Mittelwert der Grundgesamtheit. Er wird gebildet, indem man alle Ausprägungen aufsummiert und durch die Gesamtzahl von Ausprägungen teilt. $$
+Der arithmetische Mittelwert (oft auch "arithmetisches Mittel" oder nur "Mittelwert" genannt) der Stichprobe ist der bekannteste Lageparameter und Schätzer für µ, den Mittelwert der Grundgesamtheit. $$
 \bar{x}=\frac{1}{n}\cdot\sum_{i=1}^{n} x_{i}
 $$ {#eq-mittelwert}
 
@@ -77,7 +77,7 @@ yMean
 
 . . .
 
-Die Berechnung des Mittelwertes des Messsignals ($\bar{y}$) könnte alternativ mit der Funktion `mean(experiment$y)` berechnet, der berechnete Wert in der Variable `yMean` abgelegt werden
+Die Berechnung des Mittelwertes des Messsignals ($\bar{y}$) könnte alternativ mit der Funktion `mean(experiment$y)` berechnet, der berechnete Wert in der Variable `yMean` abgelegt werden.
 
 ## A.2 \| Fehlerquadratsumme
 
@@ -100,7 +100,7 @@ Qxx
 
 . . .
 
-::: {.callout-tip appearance="minimal"}
+::: {.callout-caution appearance="simple"}
 Wie wird nun die Fehlerquadratsumme $Q_{yy}$ berechnet?
 :::
 
