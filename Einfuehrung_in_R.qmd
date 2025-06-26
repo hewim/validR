@@ -65,3 +65,7 @@ Die am häufigsten zitierten Vorteile sind die Folgenden:
 -   Logisch: Wahrheitswerte (TRUE, FALSE)
 -   Zeichenkette: Text (z.B. "Hallo", "R ist toll")
 -   Faktor: kategoriale Daten (z.B. "männlich", "weiblich", "A", "B", "C")
+
+## Testfolie
+
+Test
