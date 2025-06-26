@@ -32,6 +32,11 @@ $presentation-h1: 3.2em;
 
 /*-- scss:rules --*/
 
+.MathJax {
+  font-size: 110% !important;
+  color: $presentation-heading-color !important;
+}
+
 .reveal .slide blockquote {
   border-left: 3px solid $text-muted;
   padding-left: 0.5em;

@@ -93,7 +93,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-eb19c4c1c325843c0003ae66c2d88d50.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-75447bf778b2760921aa0aa723bf7d14.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -299,9 +299,46 @@ H. Wimmer
 <li class="fragment">Faktor: kategoriale Daten (z.B. “männlich”, “weiblich”, “A”, “B”, “C”)</li>
 </ul>
 </section>
-<section id="testfolie" class="slide level2">
-<h2>Testfolie</h2>
-<p>Test</p>
+<section id="mitternachtsformel" class="slide level2">
+<h2>Mitternachtsformel</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Aufgabe</a></li><li><a href="#tabset-1-2">Lösung</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p>Wenn</p>
+<p><span class="math display">\[
+ax^2 + bx + c =0
+\]</span></p>
+<p>dann gilt:</p>
+<p><span class="math display">\[
+x_{1,2} = \frac{-b \cdot \sqrt{b^2-4ac}} {2a}
+\]</span></p>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="co"># Definition der Koeffizienten</span></span>
+<span id="cb1-2"><a href=""></a>a <span class="ot">&lt;-</span> <span class="dv">2</span> </span>
+<span id="cb1-3"><a href=""></a>b <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">5</span></span>
+<span id="cb1-4"><a href=""></a>c <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb1-5"><a href=""></a><span class="co"># Berechnung</span></span>
+<span id="cb1-6"><a href=""></a>x1 <span class="ot">&lt;-</span> (<span class="sc">-</span>b <span class="sc">+</span> <span class="fu">sqrt</span>(b <span class="sc">^</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span> <span class="sc">*</span> a <span class="sc">*</span> c)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> a)</span>
+<span id="cb1-7"><a href=""></a>x2 <span class="ot">&lt;-</span> (<span class="sc">-</span>b <span class="sc">-</span> <span class="fu">sqrt</span>(b <span class="sc">^</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span> <span class="sc">*</span> a <span class="sc">*</span> c)) <span class="sc">/</span> (<span class="dv">2</span> <span class="sc">*</span> a)</span>
+<span id="cb1-8"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s x.1 in der Konsole</span></span>
+<span id="cb1-9"><a href=""></a>x1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s x.2 in der Konsole</span></span>
+<span id="cb3-2"><a href=""></a>x2</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="aufgabe-a-grundkalibrierung" class="title-slide slide level1 center">
@@ -311,16 +348,16 @@ H. Wimmer
 <section id="einlesen-der-datei" class="slide level2">
 <h2>Einlesen der Datei</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="co"># Einlesen der Daten</span></span>
-<span id="cb1-2"><a href=""></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.table</span>(</span>
-<span id="cb1-3"><a href=""></a>  <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"experiment_1.csv"</span>),        <span class="co"># Dateipfad</span></span>
-<span id="cb1-4"><a href=""></a>  <span class="at">header =</span> <span class="cn">TRUE</span>,                           <span class="co"># Spaltenüberschrift</span></span>
-<span id="cb1-5"><a href=""></a>  <span class="at">dec =</span> <span class="st">","</span>,                               <span class="co"># Dezimaltrenner</span></span>
-<span id="cb1-6"><a href=""></a>  <span class="at">sep =</span> <span class="st">";"</span>                                <span class="co"># Spaltentrenner</span></span>
-<span id="cb1-7"><a href=""></a>  )</span>
-<span id="cb1-8"><a href=""></a></span>
-<span id="cb1-9"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb1-10"><a href=""></a>dataset</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># Einlesen der Daten</span></span>
+<span id="cb5-2"><a href=""></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.table</span>(</span>
+<span id="cb5-3"><a href=""></a>  <span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"experiment_1.csv"</span>),        <span class="co"># Dateipfad</span></span>
+<span id="cb5-4"><a href=""></a>  <span class="at">header =</span> <span class="cn">TRUE</span>,                           <span class="co"># Spaltenüberschrift</span></span>
+<span id="cb5-5"><a href=""></a>  <span class="at">dec =</span> <span class="st">","</span>,                               <span class="co"># Dezimaltrenner</span></span>
+<span id="cb5-6"><a href=""></a>  <span class="at">sep =</span> <span class="st">";"</span>                                <span class="co"># Spaltentrenner</span></span>
+<span id="cb5-7"><a href=""></a>  )</span>
+<span id="cb5-8"><a href=""></a></span>
+<span id="cb5-9"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb5-10"><a href=""></a>dataset</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </section>
@@ -341,13 +378,13 @@ H. Wimmer
 </div></section><section id="ändern-der-überschriften" class="slide level2">
 <h2>Ändern der Überschriften</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="co"># automatisches Umbenennen der Überschriften im data.frame</span></span>
-<span id="cb3-2"><a href=""></a><span class="co"># Vorsicht auf Reihenfolge der Spalten: Fehlerquelle!!!</span></span>
-<span id="cb3-3"><a href=""></a><span class="fu">colnames</span>(dataset)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"x"</span></span>
-<span id="cb3-4"><a href=""></a><span class="fu">colnames</span>(dataset)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">"y"</span></span>
-<span id="cb3-5"><a href=""></a></span>
-<span id="cb3-6"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb3-7"><a href=""></a>dataset</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="co"># automatisches Umbenennen der Überschriften im data.frame</span></span>
+<span id="cb7-2"><a href=""></a><span class="co"># Vorsicht auf Reihenfolge der Spalten: Fehlerquelle!!!</span></span>
+<span id="cb7-3"><a href=""></a><span class="fu">colnames</span>(dataset)[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="st">"x"</span></span>
+<span id="cb7-4"><a href=""></a><span class="fu">colnames</span>(dataset)[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="st">"y"</span></span>
+<span id="cb7-5"><a href=""></a></span>
+<span id="cb7-6"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb7-7"><a href=""></a>dataset</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 </section>
@@ -372,11 +409,11 @@ H. Wimmer
 \qquad(1)\]</span></span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="co"># mit Funktionen sum() und nrow()</span></span>
-<span id="cb5-2"><a href=""></a>xMean <span class="ot">&lt;-</span> <span class="fu">sum</span>(dataset<span class="sc">$</span>x) <span class="sc">/</span> <span class="fu">nrow</span>(dataset)</span>
-<span id="cb5-3"><a href=""></a></span>
-<span id="cb5-4"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb5-5"><a href=""></a>xMean</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># mit Funktionen sum() und nrow()</span></span>
+<span id="cb9-2"><a href=""></a>xMean <span class="ot">&lt;-</span> <span class="fu">sum</span>(dataset<span class="sc">$</span>x) <span class="sc">/</span> <span class="fu">nrow</span>(dataset)</span>
+<span id="cb9-3"><a href=""></a></span>
+<span id="cb9-4"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb9-5"><a href=""></a>xMean</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -396,10 +433,10 @@ H. Wimmer
 \qquad(2)\]</span></span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="co"># Fehlerquadratsumme</span></span>
-<span id="cb7-2"><a href=""></a>Qxx <span class="ot">&lt;-</span> <span class="fu">sum</span>((dataset<span class="sc">$</span>x <span class="sc">-</span> xMean) <span class="sc">^</span> <span class="dv">2</span>)</span>
-<span id="cb7-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb7-4"><a href=""></a>Qxx</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="co"># Fehlerquadratsumme</span></span>
+<span id="cb11-2"><a href=""></a>Qxx <span class="ot">&lt;-</span> <span class="fu">sum</span>((dataset<span class="sc">$</span>x <span class="sc">-</span> xMean) <span class="sc">^</span> <span class="dv">2</span>)</span>
+<span id="cb11-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb11-4"><a href=""></a>Qxx</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -427,10 +464,10 @@ H. Wimmer
 Q_{xy}= \sum_{i=1}^{n}(x_i-\bar{x}) \cdot (y_i-\bar{y})
 \qquad(3)\]</span></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href=""></a><span class="co"># Produktsumme</span></span>
-<span id="cb9-2"><a href=""></a>Qxy <span class="ot">&lt;-</span> <span class="fu">sum</span>((dataset<span class="sc">$</span>x <span class="sc">-</span> xMean) <span class="sc">*</span> (dataset<span class="sc">$</span>y <span class="sc">-</span> yMean))</span>
-<span id="cb9-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb9-4"><a href=""></a>Qxy</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="co"># Produktsumme</span></span>
+<span id="cb13-2"><a href=""></a>Qxy <span class="ot">&lt;-</span> <span class="fu">sum</span>((dataset<span class="sc">$</span>x <span class="sc">-</span> xMean) <span class="sc">*</span> (dataset<span class="sc">$</span>y <span class="sc">-</span> yMean))</span>
+<span id="cb13-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb13-4"><a href=""></a>Qxy</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -446,10 +483,10 @@ b=\frac{\sum_{i=1}^{n} \left ( x_i-\bar{x} \right )\cdot \left (  y_i-\bar{y}  \
 \qquad(4)\]</span></span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="co"># Steigung der Kalibrierfunktion</span></span>
-<span id="cb11-2"><a href=""></a>b1 <span class="ot">&lt;-</span> Qxy <span class="sc">/</span> Qxx</span>
-<span id="cb11-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb11-4"><a href=""></a>b1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># Steigung der Kalibrierfunktion</span></span>
+<span id="cb15-2"><a href=""></a>b1 <span class="ot">&lt;-</span> Qxy <span class="sc">/</span> Qxx</span>
+<span id="cb15-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb15-4"><a href=""></a>b1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -465,10 +502,10 @@ b=\frac{\sum_{i=1}^{n} \left ( x_i-\bar{x} \right )\cdot \left (  y_i-\bar{y}  \
 a = \bar{y} - b \cdot \bar{x}
 \qquad(5)\]</span></span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="co"># Achsenabschitt der Kalibrierfunktion</span></span>
-<span id="cb13-2"><a href=""></a>a1 <span class="ot">&lt;-</span>yMean <span class="sc">-</span> b1 <span class="sc">*</span> xMean </span>
-<span id="cb13-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb13-4"><a href=""></a>a1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href=""></a><span class="co"># Achsenabschitt der Kalibrierfunktion</span></span>
+<span id="cb17-2"><a href=""></a>a1 <span class="ot">&lt;-</span>yMean <span class="sc">-</span> b1 <span class="sc">*</span> xMean </span>
+<span id="cb17-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb17-4"><a href=""></a>a1</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">
@@ -499,10 +536,10 @@ a = \bar{y} - b \cdot \bar{x}
 <section id="geschätzte-werte-bary" class="slide level2">
 <h2>Geschätzte Werte <span class="math inline">\(\bar{y}\)</span></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="co"># gefittete Werte</span></span>
-<span id="cb15-2"><a href=""></a>dataset<span class="sc">$</span>fit1 <span class="ot">&lt;-</span> a1 <span class="sc">+</span> b1 <span class="sc">*</span> dataset<span class="sc">$</span>x</span>
-<span id="cb15-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
-<span id="cb15-4"><a href=""></a>dataset</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href=""></a><span class="co"># gefittete Werte</span></span>
+<span id="cb19-2"><a href=""></a>dataset<span class="sc">$</span>fit1 <span class="ot">&lt;-</span> a1 <span class="sc">+</span> b1 <span class="sc">*</span> dataset<span class="sc">$</span>x</span>
+<span id="cb19-3"><a href=""></a><span class="co"># Anzeige des/der Variableninhalte/s in der Konsole</span></span>
+<span id="cb19-4"><a href=""></a>dataset</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment">
 <div class="cell-output cell-output-stdout">

@@ -66,6 +66,38 @@ Die am häufigsten zitierten Vorteile sind die Folgenden:
 -   Zeichenkette: Text (z.B. "Hallo", "R ist toll")
 -   Faktor: kategoriale Daten (z.B. "männlich", "weiblich", "A", "B", "C")
 
-## Testfolie
+## Mitternachtsformel
 
-Test
+:::: {.panel-tabset}
+## Aufgabe
+Wenn
+
+$$
+ax^2 + bx + c =0
+$$
+
+dann gilt:
+
+$$
+x_{1,2} = \frac{-b \cdot \sqrt{b^2-4ac}} {2a}
+$$
+
+## Lösung
+
+```{r}
+#| label: mitternachtsformel
+#| output-location: fragment
+# Definition der Koeffizienten
+a <- 2 
+b <- -5
+c <- 3
+# Berechnung
+x1 <- (-b + sqrt(b ^ 2 - 4 * a * c)) / (2 * a)
+x2 <- (-b - sqrt(b ^ 2 - 4 * a * c)) / (2 * a)
+# Anzeige des/der Variableninhalte/s x.1 in der Konsole
+x1
+# Anzeige des/der Variableninhalte/s x.2 in der Konsole
+x2
+```
+
+::::
