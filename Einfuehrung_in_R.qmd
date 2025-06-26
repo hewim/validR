@@ -50,6 +50,18 @@ Die am häufigsten zitierten Vorteile sind die Folgenden:
 -   ![](images/Rlogo.svg){.icon2} ist nicht wie SPSS oder Graphpad prism.
 -   ![](images/Rlogo.svg){.icon2} ist im nativen Zustand ein Kommandozeilenprogramm.
 
-## Datenstrukturen & Datentypen
+## Datenstrukturen
 
-![](images/datenstruktur.svg){fig-align="center" width="75%"}
+-   Vektor: eine eindimensionale Liste von Werten, die alle den gleichen Datentyp haben (z.B. Zahlen, Zeichenketten, logische Werte)
+-   Matrix: eine zweidimensionale Liste von Werten, die alle den gleichen Datentyp haben
+-   Data Frame: eine zweidimensionale Liste von Werten, die unterschiedliche Datentypen haben können (z.B. Zahlen, Zeichenketten, logische Werte)
+-   Liste: eine Sammlung von Objekten, die unterschiedliche Datentypen haben können (z.B. Vektoren, Matrizen, Data Frames, andere Listen)
+-   Faktor: eine spezielle Art von Vektor, der kategoriale Daten repräsentiert (z.B. Geschlecht, Blutgruppe)
+
+## Datentypen
+
+-   Numerisch: Zahlen (z.B. 1, 2.5, -3)
+-   Ganzzahlig: ganze Zahlen (z.B. 1L, 2L, -3L)
+-   Logisch: Wahrheitswerte (TRUE, FALSE)
+-   Zeichenkette: Text (z.B. "Hallo", "R ist toll")
+-   Faktor: kategoriale Daten (z.B. "männlich", "weiblich", "A", "B", "C")
