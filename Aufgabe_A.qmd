@@ -19,15 +19,15 @@ require("here")
 #| output-location: slide
 
 # Einlesen der Daten
-experiment <- read.table(
-  here("data", "experiment_1.csv"),
-  header = TRUE,
-  dec = ",",
-  sep = ";"
+dataset <- read.table(
+  here("data", "experiment_1.csv"),        # Dateipfad
+  header = TRUE,                           # Spaltenüberschrift
+  dec = ",",                               # Dezimaltrenner
+  sep = ";"                                # Spaltentrenner
   )
 
 # Anzeige des/der Variableninhalte/s in der Konsole
-experiment
+dataset
 ```
 
 ## Ändern der Überschriften
@@ -38,11 +38,11 @@ experiment
 
 # automatisches Umbenennen der Überschriften im data.frame
 # Vorsicht auf Reihenfolge der Spalten: Fehlerquelle!!!
-colnames(experiment)[1] <- "x"
-colnames(experiment)[2] <- "y"
+colnames(dataset)[1] <- "x"
+colnames(dataset)[2] <- "y"
 
 # Anzeige des/der Variableninhalte/s in der Konsole
-experiment
+dataset
 ```
 
 ## A.1 \| Arithmetischer Mittelwert {.scrollable}
@@ -58,7 +58,7 @@ $$ {#eq-mittelwert}
 #| output-location: fragment
 
 # mit Funktionen sum() und nrow()
-xMean <- sum(experiment$x) / nrow(experiment)
+xMean <- sum(dataset$x) / nrow(dataset)
 
 # Anzeige des/der Variableninhalte/s in der Konsole
 xMean
@@ -70,7 +70,7 @@ xMean
 #| echo: false
 
 # mit Funktion mean()
-yMean <- mean(experiment$y)
+yMean <- mean(dataset$y)
 # Anzeige des/der Variableninhalte/s in der Konsole
 yMean
 ```
@@ -93,7 +93,7 @@ $$ {#eq-fehlerquadratsumme}
 #| label: fehlerqudaratsumme
 #| output-location: fragment
 # Fehlerquadratsumme
-Qxx <- sum((experiment$x - xMean) ^ 2)
+Qxx <- sum((dataset$x - xMean) ^ 2)
 # Anzeige des/der Variableninhalte/s in der Konsole
 Qxx
 ```
@@ -116,7 +116,7 @@ $$ {#eq-fehlerproduktsumme}
 #| label: fehlerproduktsumme
 #| output-location: fragment
 # Produktsumme
-Qxy <- sum((experiment$x - xMean) * (experiment$y - yMean))
+Qxy <- sum((dataset$x - xMean) * (dataset$y - yMean))
 # Anzeige des/der Variableninhalte/s in der Konsole
 Qxy
 ```

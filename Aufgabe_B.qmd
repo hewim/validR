@@ -16,10 +16,10 @@ Fehlerquadratsumme (`Qxx`)
 Fehlerproduktsumme (`Qxy`)
 :::
 
-::: {.column width="60%" align="bottom"}
-`r mean(experiment$x)` mg/dL
+::: {.column width="60%"}
+`r mean(dataset$x)` mg/dL
 
-`r mean(experiment$y)` E
+`r mean(dataset$y)` E
 
 `r Qxx` (mg/dL)^2^
 
@@ -34,8 +34,7 @@ Fehlerproduktsumme (`Qxy`)
 #| output-location: fragment
 
 # gefittete Werte
-experiment$fit1 <- a1 + b1 * experiment$x
+dataset$fit1 <- a1 + b1 * dataset$x
 # Anzeige des/der Variableninhalte/s in der Konsole
-experiment
+dataset
 ```
-

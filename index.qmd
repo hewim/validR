@@ -12,16 +12,23 @@ toc-depth: 1
 
 ```
 
-# Aufgabe A - Grundkalibrierung
+# Aufgabe A | Grundkalibrierung
 
 ```{r child="Aufgabe_A.qmd"}
 #| label: A
 
 ```
 
-# Aufgabe B - Gütekriterien
+# Aufgabe B | Gütekriterien
 
 ```{r child="Aufgabe_B.qmd"}
 #| label: B
 
 ```
+
+# Aufgabe C | Konfidenz- und Prädiktionsintervalle
+```{r child="Aufgabe_C.qmd"}
+#| label: C
+
+```
+

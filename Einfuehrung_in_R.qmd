@@ -45,11 +45,11 @@ Die am häufigsten zitierten Vorteile sind die Folgenden:
 
 ## Was nicht ist ![](images/Rlogo.svg){.icon1}!
 
+![](images/einfuehrung/screenshot_console.svg){fig-align="center" width="65%"}
+
 -   ![](images/Rlogo.svg){.icon2} ist nicht wie SPSS oder Graphpad prism.
 -   ![](images/Rlogo.svg){.icon2} ist im nativen Zustand ein Kommandozeilenprogramm.
 
-![](images/einfuehrung/screenshot_console.svg){fig-align="center" width="22cm"}
+## Datenstrukturen & Datentypen
 
-## Überschrift 2
-
-![](images/datenstruktur.svg){fig-align="center" width="19.2cm" height="16cm"}
+![](images/datenstruktur.svg){fig-align="center" width="75%"}
