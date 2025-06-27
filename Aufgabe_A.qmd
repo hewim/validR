@@ -83,6 +83,8 @@ Die Berechnung des Mittelwertes des Messsignals ($\bar{y}$) könnte alternativ m
 
 Die auch als Hilfsquadrat bezeichnete Fehlerquadratsumme $Q_{xx}$ ist die Summe $\sum$ aus quadrierten Differenzen - aus den Differenzen jedes Einzewertes $x_i$ und des Mittelwerts $\bar{x}$.
 
+. . .
+
 $$
     Q_{xx}=\sum_{i=1}^{n}\left( x_{i}-\bar{x} \right)^2
 $$ {#eq-fehlerquadratsumme}
