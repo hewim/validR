@@ -39,7 +39,7 @@ Die am häufigsten zitierten Vorteile sind die Folgenden:
 
 -   Open Source: der Quellcode ist frei verfügbar, ![](images/Rlogo.svg){.icon2} kann beliebig erweitert werden, gute Dokumentation,
 
--   Reproduzierbarkeit: ein sauber geschriebenes ![](images/Rlogo.svg){.icon2}-Script, kann frei verfügbar ausführbar gemacht werden. *„In case you didn’t realize, but that’s kind of a big thing in science.“*
+-   Reproduzierbarkeit: ein sauber geschriebenes ![](images/Rlogo.svg){.icon2}-Script, kann frei verfügbar ausführbar gemacht werden. [ *„In case you didn’t realize, but that’s kind of a big thing in science.“*]{.fragment}
 
 -   Flexibilität: ![](images/Rlogo.svg){.icon2} ist eine Programmiersprache, das heißt per default kann ![](images/Rlogo.svg){.icon2} erstmal alles. Vielleicht nicht alles gut, aber prinzipiell lässt sich zumindest theoretisch alles damit anstellen.
 
@@ -68,8 +68,9 @@ Die am häufigsten zitierten Vorteile sind die Folgenden:
 
 ## Mitternachtsformel
 
-:::: {.panel-tabset}
+::: panel-tabset
 ## Aufgabe
+
 Wenn
 
 $$
@@ -99,5 +100,4 @@ x1
 # Anzeige des/der Variableninhalte/s x.2 in der Konsole
 x2
 ```
-
-::::
+:::
